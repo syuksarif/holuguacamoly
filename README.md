@@ -68,3 +68,13 @@ contract TokenExists {
         exists[tokenId] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MarketplaceFee {
+    uint256 public feeBps = 250; // 2.5%
+
+    function setFee(uint256 bps) external {
+        feeBps = bps;
+    }
+}
