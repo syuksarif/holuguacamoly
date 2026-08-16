@@ -18,3 +18,13 @@ contract RefundStyle {
         refundable = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RewardRate {
+    uint256 public rate = 100; // example rate
+
+    function setRate(uint256 _rate) external {
+        rate = _rate;
+    }
+}
