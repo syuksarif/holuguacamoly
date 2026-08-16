@@ -48,3 +48,13 @@ contract CompoundFlag {
         autoCompound[msg.sender] = enabled;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract NFTBurn {
+    mapping(uint256 => bool) public burned;
+
+    function burn(uint256 tokenId) external {
+        burned[tokenId] = true;
+    }
+}
