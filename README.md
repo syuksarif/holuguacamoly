@@ -38,3 +38,13 @@ contract CompoundFlag {
         autoCompound[msg.sender] = enabled;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CompoundFlag {
+    mapping(address => bool) public autoCompound;
+
+    function setCompound(bool enabled) external {
+        autoCompound[msg.sender] = enabled;
+    }
+}
