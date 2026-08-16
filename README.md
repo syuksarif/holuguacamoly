@@ -58,3 +58,13 @@ contract NFTBurn {
         burned[tokenId] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TokenExists {
+    mapping(uint256 => bool) public exists;
+
+    function mint(uint256 tokenId) external {
+        exists[tokenId] = true;
+    }
+}
