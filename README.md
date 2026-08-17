@@ -88,3 +88,13 @@ contract CollectionSize {
         maxSupply = _max;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MaxPerWallet {
+    uint256 public maxPerWallet = 5;
+
+    function setMax(uint256 _max) external {
+        maxPerWallet = _max;
+    }
+}
