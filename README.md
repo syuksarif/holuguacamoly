@@ -78,3 +78,13 @@ contract MarketplaceFee {
         feeBps = bps;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CollectionSize {
+    uint256 public maxSupply = 10000;
+
+    function setMaxSupply(uint256 _max) external {
+        maxSupply = _max;
+    }
+}
