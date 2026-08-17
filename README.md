@@ -98,3 +98,13 @@ contract MaxPerWallet {
         maxPerWallet = _max;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BaseURI {
+    string public baseURI;
+
+    function setBaseURI(string calldata uri) external {
+        baseURI = uri;
+    }
+}
