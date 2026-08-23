@@ -158,3 +158,13 @@ contract ReferralCount {
         referrals[referrer]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RankStorage {
+    mapping(address => uint256) public rank;
+
+    function setRank(uint256 newRank) external {
+        rank[msg.sender] = newRank;
+    }
+}
