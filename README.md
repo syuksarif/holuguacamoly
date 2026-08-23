@@ -138,3 +138,13 @@ contract Attributes {
         attributeCount[tokenId] = count;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Cooldown {
+    mapping(address => uint256) public cooldownUntil;
+
+    function startCooldown(uint256 duration) external {
+        cooldownUntil[msg.sender] = block.timestamp + duration;
+    }
+}
