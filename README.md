@@ -178,3 +178,13 @@ contract SeasonEnd {
         endTime = _endTime;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TrophyStorage {
+    mapping(address => string) public trophy;
+
+    function setTrophy(string calldata name) external {
+        trophy[msg.sender] = name;
+    }
+}
