@@ -128,3 +128,13 @@ contract Attributes {
         attributeCount[tokenId] = count;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Attributes {
+    mapping(uint256 => uint256) public attributeCount;
+
+    function setAttributes(uint256 tokenId, uint256 count) external {
+        attributeCount[tokenId] = count;
+    }
+}
