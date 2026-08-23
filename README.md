@@ -208,3 +208,13 @@ contract EnergySystem {
         energy[msg.sender] = amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract QuestReward {
+    mapping(address => mapping(uint256 => bool)) public claimed;
+
+    function claim(uint256 questId) external {
+        claimed[msg.sender][questId] = true;
+    }
+}
