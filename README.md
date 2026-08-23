@@ -148,3 +148,13 @@ contract Cooldown {
         cooldownUntil[msg.sender] = block.timestamp + duration;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ReferralCount {
+    mapping(address => uint256) public referrals;
+
+    function addReferral(address referrer) external {
+        referrals[referrer]++;
+    }
+}
