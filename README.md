@@ -168,3 +168,13 @@ contract RankStorage {
         rank[msg.sender] = newRank;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SeasonEnd {
+    uint256 public endTime;
+
+    function setEndTime(uint256 _endTime) external {
+        endTime = _endTime;
+    }
+}
