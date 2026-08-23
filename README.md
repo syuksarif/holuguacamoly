@@ -188,3 +188,13 @@ contract TrophyStorage {
         trophy[msg.sender] = name;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EquippedItem {
+    mapping(address => uint256) public equipped;
+
+    function equip(uint256 itemId) external {
+        equipped[msg.sender] = itemId;
+    }
+}
