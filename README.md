@@ -218,3 +218,13 @@ contract QuestReward {
         claimed[msg.sender][questId] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TeamMembers {
+    mapping(uint256 => uint256) public memberCount;
+
+    function joinTeam(uint256 teamId) external {
+        memberCount[teamId]++;
+    }
+}
