@@ -198,3 +198,13 @@ contract EquippedItem {
         equipped[msg.sender] = itemId;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EnergySystem {
+    mapping(address => uint256) public energy;
+
+    function setEnergy(uint256 amount) external {
+        energy[msg.sender] = amount;
+    }
+}
