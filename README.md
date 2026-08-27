@@ -228,3 +228,13 @@ contract TeamMembers {
         memberCount[teamId]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ClanMembers {
+    mapping(string => uint256) public members;
+
+    function joinClan(string calldata clan) external {
+        members[clan]++;
+    }
+}
