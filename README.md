@@ -258,3 +258,13 @@ contract DefenseStat {
         defense[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AttackPower {
+    mapping(address => uint256) public attack;
+
+    function setAttack(uint256 value) external {
+        attack[msg.sender] = value;
+    }
+}
