@@ -288,3 +288,13 @@ contract WisdomStat {
         wisdom[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract WillpowerStat {
+    mapping(address => uint256) public willpower;
+
+    function setWillpower(uint256 value) external {
+        willpower[msg.sender] = value;
+    }
+}
