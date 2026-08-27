@@ -238,3 +238,13 @@ contract ClanMembers {
         members[clan]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ManaPoints {
+    mapping(address => uint256) public mana;
+
+    function setMana(uint256 value) external {
+        mana[msg.sender] = value;
+    }
+}
