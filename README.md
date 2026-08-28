@@ -318,3 +318,13 @@ contract InfluenceScore {
         influence[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StandingScore {
+    mapping(address => uint256) public standing;
+
+    function setStanding(uint256 value) external {
+        standing[msg.sender] = value;
+    }
+}
