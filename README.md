@@ -308,3 +308,13 @@ contract TrustScore {
         trust[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract InfluenceScore {
+    mapping(address => uint256) public influence;
+
+    function setInfluence(uint256 value) external {
+        influence[msg.sender] = value;
+    }
+}
