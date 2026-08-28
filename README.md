@@ -328,3 +328,13 @@ contract StandingScore {
         standing[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RespectPoints {
+    mapping(address => uint256) public respect;
+
+    function addRespect(uint256 value) external {
+        respect[msg.sender] += value;
+    }
+}
