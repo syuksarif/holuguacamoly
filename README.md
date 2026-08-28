@@ -298,3 +298,13 @@ contract WillpowerStat {
         willpower[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TrustScore {
+    mapping(address => uint256) public trust;
+
+    function setTrust(uint256 value) external {
+        trust[msg.sender] = value;
+    }
+}
