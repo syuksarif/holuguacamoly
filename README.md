@@ -338,3 +338,13 @@ contract RespectPoints {
         respect[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PopularityScore {
+    mapping(address => uint256) public popularity;
+
+    function setPopularity(uint256 value) external {
+        popularity[msg.sender] = value;
+    }
+}
