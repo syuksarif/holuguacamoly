@@ -392,3 +392,13 @@ contract RsvpCount {
         rsvps[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ReviewCount {
+    mapping(address => uint256) public reviews;
+
+    function addReview() external {
+        reviews[msg.sender]++;
+    }
+}
