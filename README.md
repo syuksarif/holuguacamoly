@@ -372,3 +372,13 @@ contract NotificationCount {
         unread[msg.sender] = 0;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MuteCount {
+    mapping(address => uint256) public muted;
+
+    function addMute() external {
+        muted[msg.sender]++;
+    }
+}
