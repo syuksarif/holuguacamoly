@@ -382,3 +382,13 @@ contract MuteCount {
         muted[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RsvpCount {
+    mapping(address => uint256) public rsvps;
+
+    function addRsvp() external {
+        rsvps[msg.sender]++;
+    }
+}
