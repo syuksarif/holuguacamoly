@@ -412,3 +412,13 @@ contract TagCount {
         tags[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SortCount {
+    mapping(address => uint256) public sorts;
+
+    function addSort() external {
+        sorts[msg.sender]++;
+    }
+}
