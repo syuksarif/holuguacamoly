@@ -358,3 +358,17 @@ contract PostsCount {
         posts[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract NotificationCount {
+    mapping(address => uint256) public unread;
+
+    function addNotification(address user) external {
+        unread[user]++;
+    }
+
+    function clear() external {
+        unread[msg.sender] = 0;
+    }
+}
