@@ -402,3 +402,13 @@ contract ReviewCount {
         reviews[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TagCount {
+    mapping(address => uint256) public tags;
+
+    function addTag() external {
+        tags[msg.sender]++;
+    }
+}
