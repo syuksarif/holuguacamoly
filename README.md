@@ -432,3 +432,13 @@ contract UploadCount {
         uploads[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ArchiveCount {
+    mapping(address => uint256) public archives;
+
+    function addArchive() external {
+        archives[msg.sender]++;
+    }
+}
