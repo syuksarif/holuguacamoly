@@ -472,3 +472,13 @@ contract StakeCount {
         stakes[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FarmCount {
+    mapping(address => uint256) public farms;
+
+    function addFarm() external {
+        farms[msg.sender]++;
+    }
+}
