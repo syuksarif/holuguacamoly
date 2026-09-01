@@ -452,3 +452,13 @@ contract StarCount {
         stars[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BoostCount {
+    mapping(address => uint256) public boosts;
+
+    function addBoost() external {
+        boosts[msg.sender]++;
+    }
+}
