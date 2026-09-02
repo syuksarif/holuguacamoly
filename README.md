@@ -522,3 +522,13 @@ contract MainnetDeploy {
         deploys[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract OnchainSummer {
+    mapping(address => bool) public participated;
+
+    function join() external {
+        participated[msg.sender] = true;
+    }
+}
