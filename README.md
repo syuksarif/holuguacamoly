@@ -502,3 +502,13 @@ contract InteractCount {
         interactions[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract VolumeTracker {
+    mapping(address => uint256) public volume;
+
+    function addVolume(uint256 amount) external {
+        volume[msg.sender] += amount;
+    }
+}
