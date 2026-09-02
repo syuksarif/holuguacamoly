@@ -482,3 +482,13 @@ contract FarmCount {
         farms[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract DelegateCount {
+    mapping(address => uint256) public delegations;
+
+    function addDelegation() external {
+        delegations[msg.sender]++;
+    }
+}
