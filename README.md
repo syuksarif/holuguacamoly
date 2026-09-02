@@ -532,3 +532,13 @@ contract OnchainSummer {
         participated[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CommitMilestone {
+    mapping(address => uint256) public commits;
+
+    function setCommits(uint256 amount) external {
+        commits[msg.sender] = amount;
+    }
+}
