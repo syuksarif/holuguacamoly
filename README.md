@@ -542,3 +542,13 @@ contract CommitMilestone {
         commits[msg.sender] = amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract XConnected {
+    mapping(address => bool) public connected;
+
+    function connect() external {
+        connected[msg.sender] = true;
+    }
+}
