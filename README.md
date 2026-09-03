@@ -552,3 +552,13 @@ contract XConnected {
         connected[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FirstTx {
+    mapping(address => bool) public done;
+
+    function mark() external {
+        done[msg.sender] = true;
+    }
+}
