@@ -602,3 +602,13 @@ contract VisitBaseOrg {
         visited[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LearnConsul {
+    mapping(address => bool) public unlocked;
+
+    function unlock() external {
+        unlocked[msg.sender] = true;
+    }
+}
