@@ -782,3 +782,13 @@ contract MultisigPin {
         completed[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RouterPin {
+    mapping(address => bool) public completed;
+
+    function complete() external {
+        completed[msg.sender] = true;
+    }
+}
